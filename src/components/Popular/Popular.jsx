@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import  { Splide, SplideSlide} from "@splidejs/react-splide";
-import '@splidejs/react-splide/css';
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 import styles from "../../styles/Popular.module.scss";
 
 const Popular = () => {
@@ -21,23 +21,20 @@ const Popular = () => {
   };
 
   return (
-    <div className={styles.popular}>
-         <div className= {styles.header}><h3>Most Popular</h3></div> 
-         <div className={styles.popSection}>
-      {popular.map((recipe) => {
-        return (
-          
-          
-          <div className={styles.wrapper} key={recipe.id}>
-           
-            <div className={styles.card}>
-              <p>{recipe.title}</p>
-              <img src={recipe.image} alt={recipe.title} />
-            </div>
-          </div>
-          
-        );
-      })}</div>
+    <div className={styles.wrapper}>
+      <h3>Most Popular</h3>
+      <Splide>
+        {popular.map((recipe) => {
+          return (
+            <SplideSlide>
+              <div className={styles.card}>
+                <p>{recipe.title}</p>
+                <img src={recipe.image} alt={recipe.title} />
+              </div>
+            </SplideSlide>
+          );
+        })}
+      </Splide>
     </div>
   );
 };
