@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Montserrat&display=swap');
+
 html, body {
     background-color: #f2eecb;
+    margin: 10px 10%;
+    font-family: 'Montserrat', sans-serif;
+    color: #656566;
+    @media (max-width: 390px){
+        margin: 10px 0;
+    }
 }
