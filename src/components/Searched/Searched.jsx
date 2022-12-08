@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "../../styles/Searched.module.scss";
 
 const Searched = () => {
@@ -25,8 +26,10 @@ const Searched = () => {
   {searchedRec.map((item) => {
       return(
           <div className={styles.card} key={item.id}>
+                <Link to={'/recipe/' + item.id}>
               <img src={item.image} alt="" />
               <h4>{item.title}</h4>
+              </Link>
           </div>
       )
   })
@@ -37,3 +40,28 @@ const Searched = () => {
 };
 
 export default Searched;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

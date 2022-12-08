@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 // import { motion } from "framer-motion";
 import {  useParams } from "react-router-dom";
 import styles from "../../styles/Cuisine.module.scss";
@@ -25,8 +26,10 @@ const Cuisine = () => {
 {cuisine.map((item) => {
     return(
         <div className={styles.card} key={item.id}>
+          <Link to={'/recipe/' + item.id}>
             <img src={item.image} alt="" />
             <h4>{item.title}</h4>
+            </Link>
         </div>
     )
 })

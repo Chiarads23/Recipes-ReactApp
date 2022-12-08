@@ -1,6 +1,7 @@
 import React from "react";
 // import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
 import Pages from "./components/Pages";
 import Category from "./components/Category";
 import Search from "./components/Search/Search";
@@ -13,6 +14,7 @@ const App = () => {
     <div className="App">
 
       <BrowserRouter>
+      <Navbar />
       <Search />
         <Category />
         <Pages />
