@@ -2,7 +2,8 @@
     margin-top: 10rem;
     margin-bottom: 5rem;
     display: flex;
-
+flex-direction: column;
+justify-content: left;
 
     h2{
         margin-bottom: 2rem;
@@ -16,7 +17,7 @@ font-size: 1.2rem;
     }
 
 .info{
- margin-left: 10rem;
+
 
 button{
     padding: 1rem 2rem;
@@ -25,7 +26,7 @@ button{
     border-radius: 26px;
     margin-right: 2rem;
     font-weight: 600;
-    &:active{
+    button:active{
         background-color:  #3a9691;
         color:rgba(242, 242, 242, 0.6);
 }}}}
