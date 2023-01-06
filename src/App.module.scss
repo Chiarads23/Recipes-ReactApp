@@ -1,4 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Montserrat&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Lobster+Two:ital@1&family=Montserrat&display=swap');
+
+
+html, body {
+    background-color: #f2eecb;
+    margin: 10px 10%;
+    font-family: 'Montserrat', sans-serif;
+    color: #656566;
+    @media (max-width: 390px){
+        margin: 10px 0;
+    }
+}
+
 
 .navbar{
 padding: 4rem 0rem;
@@ -9,7 +23,9 @@ align-items: center;
 svg{
     font-size: 2rem;
 }
-.logo {
+a{
+    color: #656566;
+    cursor: pointer;
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 400;

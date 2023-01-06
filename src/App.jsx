@@ -1,11 +1,11 @@
 import React from "react";
-// import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
+import {GiKnifeFork} from 'react-icons/gi';
 import Pages from "./components/Pages";
 import Category from "./components/Category";
 import Search from "./components/Search/Search";
-import "./App.scss";
+import styles from "./App.module.scss";
 
 const App = () => {
 
@@ -14,7 +14,10 @@ const App = () => {
     <div className="App">
 
       <BrowserRouter>
-      <Navbar />
+      <div className={styles.navbar}>
+      <GiKnifeFork /> 
+      <Link to={'/'}>Recipes hunt</Link>
+      </div>
       <Search />
         <Category />
         <Pages />
