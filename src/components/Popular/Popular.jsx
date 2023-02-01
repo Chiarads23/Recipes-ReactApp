@@ -7,22 +7,25 @@ import styles from "../../styles/Popular.module.scss";
 
 const Popular = () => {
   const [popular, setPopular] = useState([]);
-
+  
   useEffect(() => {
     getPopular();
   }, []);
 
   const API_KEY = "a6d73666ed96432492d1a32fc36958fb";
+//STORING FETCH INTO LOCAL STORAGE: CHECKING FIRST WHAT'S IN IT. IF THERE'S THE ITEM WE GET IT WITH SET POPULAR, 
+//OTHERWISE IT FETCHES DATA AND SET IT
   const getPopular = async () => {
     const check = localStorage.getItem("popular");
     if (check) {
-      setPopular(JSON.parse(check));
+//STRING TO ARRAY-in local storage you can only SAVE STRINGS
+      setPopular(JSON.parse(check)); 
     } else {
       const api = await fetch(
         `https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}&number=20`
       );
       const data = await api.json();
-      localStorage.setItem("popular", JSON.stringify(data.recipes));
+      localStorage.setItem("popular", JSON.stringify(data.recipes));  // FROM ARRAY TO STRING
       setPopular(data.recipes);
     }
   };

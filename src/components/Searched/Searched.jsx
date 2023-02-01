@@ -8,6 +8,7 @@ const Searched = () => {
   const API_KEY = "a6d73666ed96432492d1a32fc36958fb";
 
   const [searchedRec, setSearchedRec] = useState([]);
+  
   let params = useParams();
 
   const getSearched = async (name) => {

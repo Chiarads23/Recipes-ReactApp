@@ -4,6 +4,8 @@ import { GiNoodles, GiChopsticks } from "react-icons/gi";
 import {NavLink} from 'react-router-dom';
 import styles from "../../styles/Category.module.scss";
 
+//NAVLINK: IT GIVES A CLASS CALLED ACTIVE, SO THAT IT'S POSSIBLE TO GIVE STILE ON CLICK ACTION. 
+
 const Category = () => {
   return (
     <div className={ styles.categoryList}>

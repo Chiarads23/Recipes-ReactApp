@@ -5,11 +5,13 @@ import styles from "../../styles/Search.module.scss";
 
 const Search = () => {
   const [input, setInput] = useState("");
+
+  //ALLOWS 
   const navigate= useNavigate();
 
   const submitHandler =(e) =>{
-    e.preventDefault();
-    navigate('/searched/' + input)
+    e.preventDefault();  //TO AVOID THE PAGE FROM REFRESHING
+    navigate('/searched/' + input)  //ALLOWS TO LINK TO THE PAGE WITHOUT LINK ELEMENTS
   }
 
   return (
