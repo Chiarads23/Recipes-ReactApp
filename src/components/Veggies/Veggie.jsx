@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { Link } from "react-router-dom";
-import styles from "../../styles/Veggies.module.scss";
+import styles from "../../styles/Popular.module.scss";
 
 const Veggies= () => {
     
