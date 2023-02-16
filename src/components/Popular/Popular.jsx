@@ -6,13 +6,16 @@ import { Link } from "react-router-dom";
 import styles from "../../styles/Popular.module.scss";
 
 const Popular = () => {
+  //like a variable that saves data
   const [popular, setPopular] = useState([]);
   
+  //we want to run the getPopular function as soon as  the components get mounted/rendered
   useEffect(() => {
     getPopular();
   }, []);
 
   const API_KEY = "a6d73666ed96432492d1a32fc36958fb";
+
 //STORING FETCH INTO LOCAL STORAGE: CHECKING FIRST WHAT'S IN IT. IF THERE'S THE ITEM WE GET IT WITH SET POPULAR, 
 //OTHERWISE IT FETCHES DATA AND SET IT
   const getPopular = async () => {

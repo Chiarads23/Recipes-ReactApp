@@ -29,17 +29,18 @@ const Cuisine = () => {
       {cuisine.map((item) => {
         return (
           <motion.div 
-          
           animate={{opacity: 1}}
           initial={{opacity:0}}
           exit={{opacity:0}}
           transition={{duration: 0.5}}
           
           className={styles.card} key={item.id}>
+
             <Link to={"/recipe/" + item.id}>
               <img src={item.image} alt="" />
               <h4>{item.title}</h4>
             </Link>
+            
           </motion.div>
         );
       })}

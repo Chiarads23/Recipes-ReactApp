@@ -27,7 +27,6 @@ const Recipe = () => {
 
   return (
     <motion.div 
-          
           animate={{opacity: 1}}
           initial={{opacity:0}}
           exit={{opacity:0}}
@@ -37,16 +36,13 @@ const Recipe = () => {
         <img src={details.image} alt="" />
       </div>
       <div className={styles.info}>
-        <button
-          className={activeBtn === "instructions" ? "active" : ""}
-          onClick={() => setActiveBtn("instructions")}>
+        <button onClick={() => setActiveBtn("instructions")}>
           Instructions
         </button>
-        <button
-          className={activeBtn === "ingredients" ? "active" : ""}
-          onClick={() => setActiveBtn("ingredients")}>
+        <button onClick={() => setActiveBtn("ingredients")}>
           Ingredients
         </button>
+
         {activeBtn === "instructions" && (
           <div>
             {/* IT ALLOWS TO RENDER THE TEXT, SO THAT THE HTML TAGS DON'T DISPLAY  */}
@@ -54,6 +50,7 @@ const Recipe = () => {
             <h3 dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
           </div>
         )} ;
+        
         {activeBtn === "ingredients" && (
           <ul>
             {details.extendedIngredients.map((ingredient) => (

@@ -7,8 +7,9 @@ import Recipe from "../Recipe/Recipe";
 import { AnimatePresence } from "framer-motion";
 
 const Pages = () => {
+  
+//useLocation returns the current 'location' object, it's useful for animation effects on change of location.
 const location = useLocation();
-
 
   return (
 <AnimatePresence mode='wait'>

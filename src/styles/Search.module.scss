@@ -1,3 +1,4 @@
+@import './variables'; 
 
 form {
   display: flex;
@@ -6,12 +7,12 @@ form {
   input {
     border: none;
     font-size: 1rem;
-    color: #656566;
+    color: $gray;
     background-color: rgba(245, 245, 245, 0.9);
     padding: 1rem;
     border-radius: 1rem;
     outline: none;
-    box-shadow: 0 4px 10px rgb(0 0 0 / 12%), 0 0 1px rgb(0 0 0 / 5%) inset;
+    box-shadow: $b-shadow;
    
   } svg{
         margin-right: 5px;

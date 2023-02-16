@@ -5,31 +5,31 @@ import "@splidejs/react-splide/css";
 import { Link } from "react-router-dom";
 import styles from "../../styles/Popular.module.scss";
 
-const Dessert = () => {
-  const [dessert, setDessert] = useState([]);
+const Pescetarian = () => {
+  const [fish, setFish] = useState([]);
 
   useEffect(() => {
-    getDessert();
+    getFish();
   }, []);
 
   const API_KEY = "a6d73666ed96432492d1a32fc36958fb";
-  const getDessert = async () => {
-    const check = localStorage.getItem("dessert");
+  const getFish = async () => {
+    const check = localStorage.getItem("fishdish");
     if (check) {
-      setDessert(JSON.parse(check));
+      setFish(JSON.parse(check));
     } else {
       const api = await fetch(
-        `https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}&number=20`
+        `https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}&number=20&tags=pescetarian`
       );
       const data = await api.json();
-      localStorage.setItem("dessert", JSON.stringify(data.recipes));
-      setDessert(data.recipes);
+      localStorage.setItem("fish", JSON.stringify(data.recipes));
+      setFish(data.recipes);
     }
   };
 
   return (
     <div className={styles.wrapper}>
-      <h3>Dessert</h3>
+      <h3>Pescetarian</h3>
       <Splide
         options={{
           arrows: false,
@@ -45,7 +45,7 @@ const Dessert = () => {
           },
         }}
       >
-        {dessert.map((recipe) => {
+        {fish.map((recipe) => {
           return (
             <SplideSlide key={recipe.id}>
               <div className={styles.card}>
@@ -62,4 +62,4 @@ const Dessert = () => {
   );
 };
 
-export default Dessert;
+export default Pescetarian;

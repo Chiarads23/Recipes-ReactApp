@@ -1,3 +1,5 @@
+@import './variables';
+
 .categoryList{
     display: flex;
     justify-content: center;
@@ -14,13 +16,13 @@
    align-items: center;
    border-radius: 50%;
    background-color: rgba(242, 242, 242, 0.6);
-   box-shadow: 0 4px 10px rgb(0 0 0 / 12%), 0 0 1px rgb(0 0 0 / 5%) inset;
+   box-shadow: $b-shadow;
    text-decoration: none;
    cursor: pointer;
    transform: scale(0.8);
 
  h4{
-    color: #656566;
+    color: $gray;
  }
  svg{
     color: #e16120;

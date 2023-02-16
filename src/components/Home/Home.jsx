@@ -1,7 +1,7 @@
 import React from "react";
 import Veggies from "../Veggies/Veggie";
 import Popular from "../Popular/Popular";
-import Dessert from "../Dessert/Dessert";
+import Pescetarian from "../Pescetarian/Pescetarian";
 import { motion } from "framer-motion";
 
 const Home =()=> {
@@ -14,7 +14,7 @@ const Home =()=> {
         >
             <Popular />
             <Veggies />
-            <Dessert />
+            <Pescetarian/>
         </motion.div>
     )
 }
