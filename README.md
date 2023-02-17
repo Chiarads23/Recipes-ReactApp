@@ -2,15 +2,15 @@ Recipes web-app: recipes 'hunt' through categories and main search input.
 
 # Tools used
 
--HTML
--SASS
--Javascript
--React.js 
--React Router Dom
--Hooks: useState, useEffect, useParams, useNavigate, useLocation
--Framer motion
--Spoonacular API
--Responsive design
+*HTML
+*SASS
+*Javascript
+*React.js 
+*React Router Dom
+*Hooks: useState, useEffect, useParams, useNavigate, useLocation
+*Framer motion
+*Spoonacular API
+*Responsive design
 
 # Getting Started with Create React App
 
