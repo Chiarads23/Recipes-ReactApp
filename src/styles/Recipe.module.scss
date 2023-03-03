@@ -10,7 +10,12 @@
   h2 {
     margin-bottom: 2rem;
   }
-
+  
+img {
+  border: 4px solid rgba(194, 191, 164, 0.8);
+  border-radius: $radius;
+  box-shadow: $b-shadow;
+}
   li {
     font-size: 1.2rem;
     line-height: 2.5rem;
@@ -18,7 +23,10 @@
   ul {
     margin-top: 2rem;
   }
-
+  a {
+    text-decoration: none;
+    color: rgb(138, 199, 124);
+  }
   .info {
     button {
       padding: 1rem 2rem;

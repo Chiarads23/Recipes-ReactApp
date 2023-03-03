@@ -39,6 +39,7 @@ const Cuisine = () => {
             <Link to={"/recipe/" + item.id}>
               <img src={item.image} alt="" />
               <h4>{item.title}</h4>
+            <div className={styles.gradient}></div>  
             </Link>
             
           </motion.div>
