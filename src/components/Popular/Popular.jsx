@@ -14,7 +14,7 @@ const Popular = () => {
     getPopular();
   }, []);
 
-  const API_KEY = "a6d73666ed96432492d1a32fc36958fb";
+   const API_KEY = "a6d73666ed96432492d1a32fc36958fb";
 
 //STORING FETCH INTO LOCAL STORAGE: CHECKING FIRST WHAT'S IN IT. IF THERE'S THE ITEM WE GET IT WITH SET POPULAR, 
 //OTHERWISE IT FETCHES DATA AND SET IT
@@ -40,13 +40,14 @@ const Popular = () => {
         options={{
           arrows: false,
           perPage: 4,
+          gap:'8px',
           breakpoints: {
             960: {
               perPage: 3,
             },
             720: {
               perPage: 2,
-              gap: "5px",
+             
             },
           },
         }}
@@ -58,6 +59,7 @@ const Popular = () => {
                 < Link to= {'/recipe/' + recipe.id}>
                 <p>{recipe.title}</p>
                 <img src={recipe.image} alt={recipe.title} />
+                <div className={styles.gradient}></div>
                 </Link>
               </div>
             </SplideSlide>

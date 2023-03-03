@@ -35,13 +35,13 @@ const Veggies= () => {
         options={{
           arrows: false,
           perPage: 4,
+          gap:'8px',
           breakpoints: {
             960: {
               perPage: 3,
             },
             720: {
               perPage: 2,
-              gap: "5px",
             },
           },
         }}
@@ -53,6 +53,7 @@ const Veggies= () => {
               < Link to= {'/recipe/' + recipe.id}>
                 <p>{recipe.title}</p>
                 <img src={recipe.image} alt={recipe.title} />
+                <div className={styles.gradient}></div>
                 </Link>
               </div>
             </SplideSlide>
